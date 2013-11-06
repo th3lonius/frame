@@ -1,0 +1,305 @@
+/*
+Title: Frame Collective screen styling
+Author: Matthew Mesaros (mesaros.creative@gmail.com)
+*/
+
+/* =RESET
+----------------------------------------------- */
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    list-style: none;
+    font-size: 100%;
+    font-style: normal;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img { max-width: 100%; }
+
+/* =FLOAT CLEAR
+----------------------------------------------- */
+.group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.group { display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .group { height: 1%; } /* IE6 */
+*:first-child+html .group { min-height: 1px; } /* IE7 */
+/* End hide from IE-mac */
+
+/* =LINKS
+----------------------------------------------- */
+a:link, a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF;
+}
+
+/* =GLOBAL
+----------------------------------------------- */
+body {
+    color: #333;
+    font-family: "museo-slab";
+    font-size: 100%;
+    height: 100%;
+    line-height: 1.45;
+    overflow: hidden;
+    width: 100%;
+}
+
+.container {
+    display: block;
+    height: 100vh;
+    left: 180px;
+    position: relative;
+    width: calc(400% - 720px);
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 70em;
+}
+
+section {
+    display: block;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+section article {
+    padding: 20px 100px;
+    text-align: left;
+}
+
+section article p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: #FFF;
+    font-family: 'quicksand-regular';
+    font-size: 1.5em;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3::before, h3::after {
+    content: "=";
+    display: inline-block;
+    margin: 0 2em;
+    -webkit-transform: scaleX(8);
+    -moz-transform: scaleX(8);
+    transform: scaleX(8);
+}
+
+
+/* =NAVIGATION
+----------------------------------------------- */
+header {
+    background: rgba(32,32,32,0.99);
+    height: 100%;
+    left: 0;
+    padding-top: 20px;
+    position: fixed;
+    width: 180px;
+    z-index: 1000;
+}
+
+nav {
+    position: fixed;
+}
+
+nav ul {
+    width: 100%;
+}
+
+nav ul li {
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+    font-family: 'quicksand-regular';
+    font-size: 1em;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background: #FFF;
+    color: #202020;
+}
+
+.active {
+    background: #FFF;
+    color: #202020 !important;
+}
+
+#branding {
+    bottom: 20px;
+    height: 60px;
+    padding-left: 20px;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    display: block;
+    font-size: 10em;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    width: 6%;
+    z-index: 10000;
+    -webkit-transition: all linear 0.5s;
+}
+
+.prev {
+    opacity: 0;
+    left: 0;
+}
+
+.next { right: 0; }
+
+.prev:hover, .next:hover { background: rgba(20,20,20,0.2); }
+
+.prev img, .next img { margin-top: calc(979px/2 - 148px); }
+
+.prev img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);    
+}
+
+/* =HOME SECTION
+----------------------------------------------- */
+#home {
+    background: rgba(32,32,32,0.99);
+    background-size: cover;
+}
+
+#home h1 {
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    font-family: "mono45-headline";
+    font-size: 10em;
+    line-height: 0.693;
+    margin: 0 auto;
+    overflow: visible;
+    padding-top: 0.8em;
+    position: relative;
+    width: 1em;
+}
+
+.frAdjust {
+    display: block;
+    padding-left: 63px;
+    -webkit-transform: rotate(2deg);
+}
+
+/*#home h1::after {
+    content: "Matthew Mesaros";
+    font-family: verdana, helvetica;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 454px;
+    left: 7em;
+    text-align: left;
+}*/
+
+.tilt {
+    display: block;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    padding-right: 9px;
+}
+
+
+h2 {
+    color: rgba(255,255,255,0.89);
+    font-family: "p22-franklin-caslon";
+    font-size: 1.5em;
+    letter-spacing: -2px;
+    margin-top: 0.5em;
+}
+
+/* =ABOUT
+----------------------------------------------- */
+#about {
+    background: #FFF;
+}
+
+/* =PRECAUTIONS
+----------------------------------------------- */
+#precautions {
+    background: yellow;
+}
+
+/* =SOLUTIONS
+----------------------------------------------- */
+#solutions {
+    background: brown;
+}
+
+
+
+
+@media only screen
+    and (max-width: 600px) {
+
+}
+
+
+@media only screen
+    and (min-width: 200px)
+    and (max-width: 700px) {
+
+}
+
+
+@media only screen
+and (min-width: 1024px) {
+
+}

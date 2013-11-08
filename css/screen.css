@@ -251,18 +251,19 @@ nav ul li a:hover {
 
 .tilt {
     display: block;
-    -webkit-transform: rotate(-15deg);
+    -webkit-transform: rotate(35deg);
     -moz-transform: rotate(-15deg);
+    margin-bottom: -20px;
     padding-right: 9px;
 }
 
 
 h2 {
-    color: rgba(255,255,255,0.89);
-    font-family: "p22-franklin-caslon";
-    font-size: 1.5em;
-    letter-spacing: -2px;
-    margin-top: 0.5em;
+    color: rgba(255,255,255,0.99);
+    font-family: "mono45-headline";
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 /* =ABOUT
